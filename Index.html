@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Portfolio - Ajmin Fayaz</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Syne:wght@400..800&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+  
+  <style>
+  body {
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    color: #1a1a1a;
+    overflow-x: hidden;
+    background-color: #E6E8E3;
+  }
+  
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding-left: 30px;
+    padding-right: 40px;
+  }
+  
+  .subtitle {
+    font-family: "Unbounded";
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text h1 {
+    font-family: "Syne";
+    font-size: 32px;
+    line-height: 1.15;
+    font-weight: 600;
+    margin-bottom: 20px;
+    width: 380px;
+  }
+  
+  .hero-text h1 span {
+    font-family: "Syne";
+    font-weight: 600;
+  }
+  
+  .description {
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 320px;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-image-wrapper{
+    display: flex;
+    margin-left: -10px;
+  }
+  
+  .image-bg-shape{
+    width: 340px;
+    height: 480px;
+    background-color: #D8DBD4;
+    border-radius: 0px 0px 170px 170px;
+    overflow: hidden;
+    justify-content: center;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.4), inset 0 0 0 1px #333;
+  }
+  
+  .image-bg-shape img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: flex-end;
+    text-align: right;
+  }
+  
+  .stat-item h2 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+  
+  .stat-item p {
+    font-family: "Outfit", sans-serif;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 400;
+    margin-top: -10px;
+  }
+  
+  .solve-cont {
+    margin-top: 80px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .solve {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    gap: 30px;
+  }
+
+  .ipad-small {
+    width: 450px;
+    height: 315px;
+    background-color: #0a0a0a;
+    border: 3px solid #d8c5c7;
+    border-radius: 32px;
+    padding: 15px;
+    z-index: 2;
+    box-shadow: -22.5px 15px 37.5px rgba(0, 0, 0, 0.8), inset 0 0 0 1px #333;
+  }
+  
+  .ipad-small .ipad-screen {
+    border-radius: 8px;
+  }
+  
+  .ipad-screen {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ipad-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .ipad-small-2 {
+    width: 450px;
+    height: 315px;
+    background-color: #0a0a0a;
+    border: 3px solid #d8c5c7;
+    border-radius: 32px;
+    padding: 15px;
+    z-index: 2;
+    box-shadow: 22.5px 15px 37.5px rgba(0, 0, 0, 0.8), inset 0 0 0 1px #333;
+  }
+  
+  .ipad-small-2 .ipad-screen-2 {
+    border-radius: 8px;
+  }
+  
+  .ipad-screen-2 {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .ipad-screen-2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .design-tt {
+    font-family: "Syne", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.2;
+    color: black;
+    align-self: center;
+  }
+  
+  .explain {
+    margin-top: 80px;
+    margin-left: -20px;
+  }
+  
+  .bull {
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  
+  .sub-tt {
+    font-family: "Unbounded", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+  }
+  
+  .explain ul {
+    padding-left: 24px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .bull span {
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  
+  .gain {
+    margin: 100px auto 0 auto;
+    padding: 0 40px;
+  }
+  
+  .cert-card {
+    background: #F3F4F1;
+    border: 3px solid #E6E8E3;
+    padding: 32px;
+    border-radius: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #333;
+  }
+  
+  .cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 1px 15px 30px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #333;
+  }
+  
+  .cert-header {
+    margin-bottom: 10px;
+  }
+  
+  .cert-header h3 {
+    font-family: "Syne", sans-serif;
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 0 0 10px 0;
+    color: #111111;
+  }
+  
+  .cert-issuer {
+    font-family: "Outfit", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+  
+  .cert-details {
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 24px;
+    line-height: 1.6;
+  }
+  
+  .cert-details p {
+    margin: 6px 0;
+  }
+  
+  .cert-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111111;
+    text-decoration: none;
+    padding-top: 15px;
+    border-top: 1px solid #D2D6CE;
+    transition: color 0.2s ease;
+  }
+  
+  .cert-link:hover {
+    color: #555;
+  }
+  
+  .end {
+    background-color: #111111;
+    color: #FFFFFF;
+    padding: 30px 40px;
+    margin-top: 80px;
+  }
+  
+  .footer-owner {
+    margin: 30px auto 0 auto;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666666;
+  }
+  
+  .links {
+    justify-content: space-around;
+    display: flex;
+    gap: 0px;
+  }
+  
+  .links a {
+    font-family: "Outfit", sans-serif;
+    color: #CCCCCC;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+  }
+  
+  .links a:hover {
+    color: #FFFFFF;
+  }
+  </style>
+</head>
+<body>
+  <div class="hero-container">
+    <div class="hero-text">
+      <p class="subtitle">Hey. I'm Ajmin Fayaz,</p>
+      <h1>I'm a <span>problem-solving <br> designer</span> driven by <br> deep thought.</h1>
+      <p class="description">
+        Transforming ideas into stunning visuals — UI/UX and brand design that captivates, engages, and delivers results.
+      </p>
+      <a href="#contact" class="cta-button">CONTACT ME ➔</a>
+    </div>
+    
+    <div class="hero-image-wrapper">
+      <div class="image-bg-shape">
+        <img src="hero2.png" alt="Designer Portrait">
+      </div>
+    </div>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <h2>2+</h2>
+        <p>Years Experience</p>
+      </div>
+      
+      <div class="stat-item">
+        <h2>Google Ux</h2>
+        <p>Certificate</p>
+      </div>
+      
+      <div class="stat-item">
+        <h2>Figma</h2>
+        <p>Proficiency</p>
+      </div>
+    </div>
+  </div>
+  
+  <section class="solve-cont">
+    <div class="solve">
+      <div class="ipad-small">
+        <div class="ipad-screen">
+          <img src="ott sm.jpg" alt="Travel App Preview">
+        </div>
+      </div>
+      <h2 class="design-tt">Travel Planning & Travel Booking</h2>
+    </div>
+    
+    <div class="explain">
+      <ol>
+        <li class="sub-tt">Project Overview</li>
+        <ul>
+          <li class="bull"><span>Challenge: </span>Travelers struggle with app-hopping, decision fatigue, and choosing the right destination and travel time.</li>
+          <li class="bull"><span>Users:</span></li>
+          <ul>
+            <li class="bull"><span>Planned Travelers:</span> Need structured, budget-friendly planning.</li>
+            <li class="bull"><span>Spontaneous Travelers:</span> Need guidance on where and when to travel.</li>
+          </ul>
+          <li class="bull"><span>Solution:</span> An AI-powered platform that combines destination discovery, smart travel timing, and booking in one seamless experience.</li>
+        </ul>
+        <li class="sub-tt">Key Features & UX Solutions</li>
+        <ul>
+          <li class="bull"><span>AI Travel Recommender:</span> Uses budget and timeframe to suggest destinations, seasons, and ideal travel dates.</li>
+          <li class="bull"><span>Smart Budget Guidance:</span> Shows estimated costs and seasonal opportunities for both traveler types.</li>
+          <li class="bull"><span>Integrated Booking:</span> Combines flights, multi-city trips, hotels, and filters into one streamlined flow.</li>
+          <li class="bull"><span>Visual Discovery:</span> Uses destination cards, costs, and seasonal information to simplify decisions.</li>
+        </ul>
+      </ol>
+    </div>
+  </section>
+  
+  <!-- 2nd -->
+  <section class="solve-cont">
+    <div class="solve">
+      <h2 class="design-tt">Merged OTT with theater seat booking</h2>
+      <div class="ipad-small-2">
+        <div class="ipad-screen-2">
+          <img src="ott sm.jpg-2" alt="OTT App Preview">
+        </div>
+      </div>
+    </div>
+    
+    <div class="explain">
+      <ol>
+        <li class="sub-tt">Project Overview</li>
+        <ul>
+          <li class="bull"><span>Challenge:</span> Moviegoers often switch between platforms to find shows, book seats, and order snacks, creating a fragmented experience.</li>
+          <li class="bull"><span>Solution:</span> A unified movie platform combining OTT streaming, theater booking, seat selection, and food ordering in one seamless flow.</li>
+        </ul>
+        <li class="sub-tt">Key Features & UX Solutions</li>
+        <ul>
+          <li class="bull"><span>OTT & Theater Integration:</span> Lets users choose between streaming at home or watching in a theater within one platform.</li>
+          <li class="bull"><span>Smart Seat Booking:</span> Users select theaters, seats, and ticket quantities while viewing real-time pricing and totals.</li>
+          <li class="bull"><span>Integrated F&B Ordering:</span> Allows users to add popcorn, drinks, and snacks during seat booking and pay together with their tickets.</li>
+          <li class="bull"><span>Digital Ticket & Pickup:</span> Links food orders to digital tickets, reducing queues and simplifying theater pickup.</li>
+        </ul>
+      </ol>
+    </div>
+  </section>
+  
+  <!-- 3rd -->
+  <section class="solve-cont">
+    <div class="solve">
+      <div class="ipad-small">
+        <div class="ipad-screen">
+          <img src="ott sm.jpg" alt="Real Estate App Preview">
+        </div>
+      </div>
+      <h2 class="design-tt">Real Estate & Property</h2>
+    </div>
+    
+    <div class="explain">
+      <ol>
+        <li class="sub-tt">Project Overview</li>
+        <ul>
+          <li class="bull"><span>Challenge:</span> Fraudulent listings and unverified sellers create trust and financial risks for real estate users.</li>
+          <li class="bull"><span>Solution:</span> A trust-focused real estate platform with seller verification, continuous monitoring, and transparent property information.</li>
+        </ul>
+        <li class="sub-tt">Key Features & UX Solutions</li>
+        <ul>
+          <li class="bull"><span>Seller Verification:</span> Background checks and verified badges ensure only trusted sellers can list properties.</li>
+          <li class="bull"><span>Listing Safety:</span> Automatically pauses or hides listings when sellers fail verification or trigger compliance issues.</li>
+          <li class="bull"><span>Verified Profiles:</span> Displays seller verification, contact options, and buyer reviews for greater transparency.</li>
+          <li class="bull"><span>Property Discovery:</span> Clean, filterable listings with pricing, property details, virtual tours, and comfort ratings.</li>
+        </ul>
+      </ol>
+    </div>
+  </section>
+  
+  <section class="gain">
+    <div class="cert-card">
+      <div class="cert-header">
+        <span class="cert-issuer">Google</span>
+        <h3>Google UX Design Professional Certificate</h3>
+      </div>
+      <div class="cert-details">
+        <p><strong>Issuing Organization:</strong> Google (via Coursera)</p>
+        <p><strong>Issued:</strong> February 27, 2026</p>
+        <p><strong>Credential ID:</strong> N6DH5E21B0QN</p>
+      </div>
+      <a href="https://coursera.org/verify/professional-cert/N6DH5E21B0QN" target="_blank" rel="noopener" class="cert-link">
+        Verify Certificate ➔
+      </a>
+    </div>
+  </section>
+  
+  <footer class="end">
+    <div class="links">
+      <a href="mailto:fayazajmin@gmail.com">fayazajmin@gmail.com</a>
+    </div>
+    <div class="footer-owner">
+      <p>Copyright &copy; 2026 Ajmin Fayaz. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
